@@ -1,0 +1,22 @@
+input[type=radio] {
+    display: none;
+}
+ 
+label {
+    position: relative;
+    display: block;
+}
+ 
+label:after {
+    content: "+";
+    position: absolute;
+    right: 1em;
+}
+ 
+input:checked + label:after {
+    content: "-";
+}
+ 
+input:checked ~ .tab-content {
+    height: 150px;
+}
